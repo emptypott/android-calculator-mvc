@@ -1,0 +1,132 @@
+package edu.nextstep.camp.calculator
+
+import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.matcher.ViewMatchers.withText
+import androidx.test.ext.junit.rules.ActivityScenarioRule
+import org.junit.Rule
+import org.junit.Test
+
+/**
+ * Created by Jeongsu Choi on 2022/01/12.
+ *
+ *
+ * Description :
+ */
+class MainActivityTest {
+
+    @get:Rule
+    val activityScenarioRule = ActivityScenarioRule(MainActivity::class.java)
+
+    // 사용자가 피연산자 0버튼을 누르면 화면에 해당 숫자가 화면에 보여야 한다.
+    @Test
+    fun test0() {
+
+        // when : 사용자가 피연산자 0 버튼을 누르면
+        onView(withId(R.id.button0)).perform(click())
+
+        // then : 화면에 0이 보여야 한다.
+        onView(withId(R.id.button0)).check(matches(withText("0")))
+    }
+
+    // 사용자가 피연산자 1버튼을 누르면 화면에 해당 숫자가 화면에 보여야 한다.
+    @Test
+    fun test1() {
+
+        // when : 사용자가 피연산자 1 버튼을 누르면
+        onView(withId(R.id.button1)).perform(click())
+
+        // then : 화면에 1이 보여야 한다.
+        onView(withId(R.id.button1)).check(matches(withText("1")))
+    }
+
+    // 사용자가 피연산자 2버튼을 누르면 화면에 해당 숫자가 화면에 보여야 한다.
+    @Test
+    fun test2() {
+
+        // when : 사용자가 피연산자 2 버튼을 누르면
+        onView(withId(R.id.button2)).perform(click())
+
+        // then : 화면에 2가 보여야 한다.
+        onView(withId(R.id.button2)).check(matches(withText("2")))
+    }
+
+    // 사용자가 피연산자 3버튼을 누르면 화면에 해당 숫자가 화면에 보여야 한다.
+    @Test
+    fun test3() {
+
+        // when : 사용자가 피연산자 3 버튼을 누르면
+        onView(withId(R.id.button3)).perform(click())
+
+        // then : 화면에 3이 보여야 한다.
+        onView(withId(R.id.button3)).check(matches(withText("3")))
+    }
+
+    // 사용자가 피연산자 4버튼을 누르면 화면에 해당 숫자가 화면에 보여야 한다.
+    @Test
+    fun test4() {
+
+        // when : 사용자가 피연산자 4 버튼을 누르면
+        onView(withId(R.id.button4)).perform(click())
+
+        // then : 화면에 4 보여야 한다.
+        onView(withId(R.id.button4)).check(matches(withText("4")))
+    }
+
+    // 사용자가 피연산자 5버튼을 누르면 화면에 해당 숫자가 화면에 보여야 한다.
+    @Test
+    fun test5() {
+
+        // when : 사용자가 피연산자 5 버튼을 누르면
+        onView(withId(R.id.button5)).perform(click())
+
+        // then : 화면에 5 보여야 한다.
+        onView(withId(R.id.button5)).check(matches(withText("5")))
+    }
+
+    // 사용자가 피연산자 6버튼을 누르면 화면에 해당 숫자가 화면에 보여야 한다.
+    @Test
+    fun test6() {
+
+        // when : 사용자가 피연산자 6 버튼을 누르면
+        onView(withId(R.id.button6)).perform(click())
+
+        // then : 화면에 6이 보여야 한다.
+        onView(withId(R.id.button6)).check(matches(withText("6")))
+    }
+
+    // 사용자가 피연산자 7버튼을 누르면 화면에 해당 숫자가 화면에 보여야 한다.
+    @Test
+    fun test7() {
+
+        // when : 사용자가 피연산자 7 버튼을 누르면
+        onView(withId(R.id.button7)).perform(click())
+
+        // then : 화면에 7이 보여야 한다.
+        onView(withId(R.id.button7)).check(matches(withText("7")))
+    }
+
+    // 사용자가 피연산자 8버튼을 누르면 화면에 해당 숫자가 화면에 보여야 한다.
+    @Test
+    fun test8() {
+
+        // when : 사용자가 피연산자 8 버튼을 누르면
+        onView(withId(R.id.button8)).perform(click())
+
+        // then : 화면에 8 보여야 한다.
+        onView(withId(R.id.button8)).check(matches(withText("8")))
+    }
+
+    // 사용자가 피연산자 9버튼을 누르면 화면에 해당 숫자가 화면에 보여야 한다.
+    @Test
+    fun test9() {
+
+        // when : 사용자가 피연산자 9 버튼을 누르면
+        onView(withId(R.id.button9)).perform(click())
+
+        // then : 화면에 9가 보여야 한다.
+        onView(withId(R.id.button9)).check(matches(withText("9")))
+    }
+}
